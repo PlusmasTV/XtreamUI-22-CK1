@@ -49,7 +49,7 @@ while getopts ":t:c:i:l:m:h:" option; do
             ;;
         h)
             echo "help usage"
-			echo "curl -L https://github.com/dOC4eVER/ubuntu20.04/raw/master/install.sh | sudo bash -s -- -a adminusername -t timezone -p adminpassord -o adminaccesport -c clientaccesport -r apacheport -e email -m mysqlpassword -s yes"
+			echo "curl -L https://raw.githubusercontent.com/PlusmasTV/XtreamUI-V22F-CK1-Ubuntu-18-20-22/main/install.sh | sudo bash -s -- -a adminusername -t timezone -p adminpassord -o adminaccesport -c clientaccesport -r apacheport -e email -m mysqlpassword -s yes"
 			echo "./install.sh -a adminusername -t timezone -p adminpassord -o adminaccesport -c clientaccesport -r apacheport -e email -m mysqlpassword -s yes"
 			echo "option -t for set Time Zone"
 			echo "option -a Enter Your Desired Admin Login Access"
@@ -62,7 +62,7 @@ while getopts ":t:c:i:l:m:h:" option; do
 			echo "option -s for silent use yes option for remove confirm install"
 			echo "option -h for write this help"
 			echo "full exemple"
-			echo "curl -L https://github.com/dOC4eVER/ubuntu20.04/raw/master/install.sh | bash -s -- -a admin -t Europe/Paris -p admin -o 25500 -c 80 -r 8080 -e admin@example.com -m mysqlpassword -s yes"
+			echo "curl -L https://raw.githubusercontent.com/PlusmasTV/XtreamUI-V22F-CK1-Ubuntu-18-20-22/main/install.sh | bash -s -- -a admin -t Europe/Paris -p admin -o 25500 -c 80 -r 8080 -e admin@example.com -m mysqlpassword -s yes"
 			echo "./install.sh -a admin -t Europe/Paris -p admin -o 25500 -c 80 -r 8080 -e admin@example.com -m mysqlpassword -s yes"
 			exit
             ;;
@@ -800,7 +800,7 @@ adduser --system --shell /bin/false xtreamcodes
 mkdir -p /home/xtreamcodes
 fi
 OSNAME=$(echo $OS | sed  "s| |.|g" )
-wget -q -O /tmp/xtreamcodes.tar.gz https://github.com/dOC4eVER/ubuntu20.04/releases/download/start/sub_xui_"$OSNAME"_"$VER".tar.gz
+wget -q -O /tmp/xtreamcodes.tar.gz http://46.175.149.24/xtreamui/ubuntu18.04-20.04/start/sub_xui_"$OSNAME"_"$VER".tar.gz
 tar -xf "/tmp/xtreamcodes.tar.gz" -C "/home/xtreamcodes/"
 rm -r /tmp/xtreamcodes.tar.gz
 
@@ -969,12 +969,12 @@ echo " "
     tput setaf 4 ; tput bold ;echo -n "[+] Installation Of Load Balancer..."; tput sgr0;    
 echo " "
 chattr -i /home/xtreamcodes/iptv_xtream_codes/GeoLite2.mmdb
-wget -O /home/xtreamcodes/iptv_xtream_codes/GeoLite2.mmdb https://github.com/dOC4eVER/ubuntu20.04/releases/download/start/GeoLite2.mmdb
+wget -O /home/xtreamcodes/iptv_xtream_codes/GeoLite2.mmdb http://46.175.149.24/xtreamui/ubuntu18.04-20.04/start/GeoLite2.mmdb
 chattr -ai /home/xtreamcodes/iptv_xtream_codes/GeoLite2.mmdb
 sudo chmod 0777 /home/xtreamcodes/iptv_xtream_codes/GeoLite2.mmdb
     mkdir /home/xtreamcodes/iptv_xtream_codes/pytools
-wget -O /home/xtreamcodes/iptv_xtream_codes/pytools/config.py https://github.com/dOC4eVER/ubuntu20.04/releases/download/start/config.py
-wget -O /home/xtreamcodes/iptv_xtream_codes/pytools/config_p3.py https://github.com/dOC4eVER/ubuntu20.04/releases/download/start/config_p3.py
+wget -O /home/xtreamcodes/iptv_xtream_codes/pytools/config.py http://46.175.149.24/xtreamui/ubuntu18.04-20.04/start/config.py
+wget -O /home/xtreamcodes/iptv_xtream_codes/pytools/config_p3.py http://46.175.149.24/xtreamui/ubuntu18.04-20.04/start/config_p3.py
     #chmod 0777 /home/xtreamcodes/iptv_xtream_codes/pytools
 chmod +x /home/xtreamcodes/iptv_xtream_codes/start_services.sh
 #chmod +x /home/xtreamcodes/iptv_xtream_codes/permissions.sh
@@ -985,7 +985,7 @@ echo "@reboot root sudo /home/xtreamcodes/iptv_xtream_codes/start_services.sh" >
 killall php-fpm
 rm -f /home/xtreamcodes/iptv_xtream_codes/php/VaiIb8.pid /home/xtreamcodes/iptv_xtream_codes/php/JdlJXm.pid /home/xtreamcodes/iptv_xtream_codes/php/CWcfSP.pid
 rm -f /home/xtreamcodes/iptv_xtream_codes/start_services.sh
-wget https://github.com/dOC4eVER/ubuntu20.04/raw/master/start_services.sh -O /home/xtreamcodes/iptv_xtream_codes/start_services.sh
+wget https://raw.githubusercontent.com/PlusmasTV/XtreamUI-V22F-CK1-Ubuntu-18-20-22/main/start_services.sh -O /home/xtreamcodes/iptv_xtream_codes/start_services.sh
 chmod +x /home/xtreamcodes/iptv_xtream_codes/start_services.sh
 if [[ "$OS" = "CentOs" || "$OS" = "Fedora" || "$OS" = "Centos Stream" ]]; then
 echo " "
