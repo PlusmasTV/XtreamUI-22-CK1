@@ -19,7 +19,14 @@ If you want to install load balance on additional servers, add a server to panel
 * Enter your desired client port access (Ex. 8080):
 * Enter your desired apache port access (Ex. 85):
 #
+#
 
+*sudo su
+*apt-get upgrade
+*apt-get update
+
+#
+#
 
 ### New installation the Xtream UI on Ubuntu 20.04/22.04 Debian 10/11 CentOS 8 Fedora 34/35/36
 
