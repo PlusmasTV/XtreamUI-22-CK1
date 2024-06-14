@@ -21,9 +21,9 @@ If you want to install load balance on additional servers, add a server to panel
 #
 #
 
-*sudo su:
-*apt-get upgrade:
-*apt-get update:
+* sudo su
+* apt-get upgrade
+* apt-get update
 
 #
 #
