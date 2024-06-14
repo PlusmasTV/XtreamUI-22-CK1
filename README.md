@@ -3,6 +3,19 @@
 ### If you install on ubuntu 18.04 there is the old command only on ubuntu 18.04
    update your ubuntu first, then install panel   
 #
+sudo su
+apt-get upgrade
+apt-get update
+apt install net-tools
+#
+
+II) ADICIONAR MIRROR PARA ACTUALIZAR REPOSITORIOS/PAQUETES:
+
+cd /usr/src
+nano /etc/apt/sources.list (nota: anadir esta linea : 
+deb http://mirrors.kernel.org/ubuntu/ xenial main)
+apt-get update
+#
 * sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install software-properties-common libxslt1-dev libcurl3 libgeoip-dev python -y;  
 * rm install.py; wget https://raw.githubusercontent.com/PlusmasTV/XtreamUI-V22F-CK1-Ubuntu-18-20-22/main/install.py; 
 * sudo python install.py  
